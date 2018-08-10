@@ -8,7 +8,8 @@ import {Quote} from '../quote'
 })
 export class QuoteComponent implements OnInit {
  quotes =[
-   new Quote(1,"When you play the Game of thrones, you win or you die! There's no middle ground.","Cersei Lannister","Owen",0,0,new Date())
+   new Quote(1,"When you play the Game of thrones, you win or you die! There's no middle ground.","Cersei Lannister","Owen",0,0,new Date(2018,4,27)),
+   new Quote(1,"When you play the Game of thrones, you win or you die! There's no middle ground.","Cersei Lannister","Owen",0,0,new Date()),
        ];
  toggleDetails(index){
    this.quotes[index].showAuthor=!this.quotes[index].showAuthor;
@@ -30,8 +31,6 @@ export class QuoteComponent implements OnInit {
         }
     }
     addNewQuote(quote){
-     let quoteLength = this.quotes.length;
-     quote.id=quoteLength+1;
      this.quotes.push(quote)
 
  }
