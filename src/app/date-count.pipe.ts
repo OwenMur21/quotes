@@ -15,7 +15,7 @@ export class DateCountPipe implements PipeTransform {
 
     var dateCounter = dateDifferenceSeconds/secondsInADay;
     if (dateCounter >= 1){
-        return (dateCounter + " " + " Days ago ") ;
+        return (dateCounter + " " + " Day(s) ago ") ;
     }else(dateCounter <= 1){
         return ("Today");
     }
